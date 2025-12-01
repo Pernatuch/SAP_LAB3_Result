@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tools, .plants {
+    display: flex;
+    gap: 5px;
+}
+
+.tool, .seed, #grow {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    background: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool.active, .seed.active {
+    background: #228B22;
+}
+
+#grow {
+    width: auto;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(8, 40px);
+    gap: 2px;
+    padding: 5px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: #8B4513;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.cell.wet {
+    background: #228B22;
+}
+
+.cell.water {
+    background: #1E90FF;
+}
+
+.plant {
+    font-size: 20px;
+}
+
+.plant.dead {
+    opacity: 0.3;
+}
